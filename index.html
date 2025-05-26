@@ -15,12 +15,16 @@
 <body>
     <section class="section__header">
         <header class="header">
-            <div class="header__div"><a href="" class="header__a"><img
-                        src="https://garudalinux.org/assets/garudalinux-logo.png" alt="logo"><span
-                        class="header__span material-icons"></span></a></div>
+            <div class="header__div">
+                <a href="" class="header__a">
+                    <img src="https://garudalinux.org/assets/garudalinux-logo.png" alt="logo">
+                </a>
+            </div>
             <nav class="header__nav">
+                <input type="checkbox" id="menu-toggle" hidden>
+                <label for="menu-toggle" class="header__button-mobile --open-nav material-icons"
+                    aria-label="Abrir menú">menu</label>
                 <ul class="header__ul">
-
                     <li class="header__li"><a href="" class="header__a"><span
                                 class="header__span material-icons">home</span>Home</a></li>
                     <li class="header__li"><a href="" class="header__a"><span
@@ -45,7 +49,7 @@
             </div>
         </header>
     </section>
-    <div class="container-tittle">
+    <div class="container-tittle" id="container-tittle">
         <h1>Downloads</h1>
         <p class="tittle__p">Enjoy the various editions of Garuda Linux.</p>
     </div>
@@ -152,9 +156,9 @@
         </p>
     </footer>
     <!-- boton flotante -->
-    <button class="float-button">
+    <a href="#container-tittle" class="float-button">
         <span class="material-icons md-36">keyboard_arrow_up</span>
-    </button>
+    </a>
 </body>
 
 </html>

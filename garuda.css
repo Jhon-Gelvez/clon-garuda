@@ -40,6 +40,8 @@ body {
     color: #ffffff; /* Texto en blanco */
 }
 
+/* seccion header */
+
 .section__header {
     --nav-color: #c19eeb;
     grid-area: header;
@@ -65,6 +67,19 @@ body {
     align-items: center;
     width: 100%;
     margin: auto;
+}
+
+/* Ocultar checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Botón hamburguesa */
+.header__button-mobile {
+    margin: auto;
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
 }
 
 .header__ul {
@@ -317,6 +332,8 @@ h1 {
     padding: 0;
     margin: 0;
     height: fit-content;
+    text-wrap: balance;
+    text-align: center;
 }
 
 .footer__content a {
@@ -347,9 +364,50 @@ h1 {
 }
 
 /* section of queries */
-
+/* Responsive */
 @media screen and (max-width: 1110px) {
-    .header__div {
+    .section__header {
+        width: 96%;
+        position: fixed;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .header__nav {
+        display: flex;
         flex-direction: column;
+    }
+
+    .header__button-mobile {
+        display: block;
+    }
+
+    .header__ul {
+        display: none;
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    #menu-toggle:checked + .header__button-mobile + .header__ul {
+        display: flex;
+    }
+    #menu-toggle:checked + .header__button-mobile {
+        margin-top: 24px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .garuda-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .garuda-container-regular {
+        max-width: 96%;
+    }
+    .garuda-card img {
+        max-width: 100%;
     }
 }
