@@ -348,6 +348,7 @@ h1 {
 /* boton flotante */
 
 .float-button {
+    user-select: none;
     background-color: var(--bg-button-color);
     width: 40px;
     height: 40px;
